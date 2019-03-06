@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Web.Http;
 using Teste.Models;
 
@@ -14,13 +13,13 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioPatrimonio conexao = new RepositorioPatrimonio())
+                using (PatrimonioRepository conexao = new PatrimonioRepository())
                 {
                     patrimonios = conexao.Get();
                     return patrimonios;
                 }
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
@@ -29,13 +28,13 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioPatrimonio conexao = new RepositorioPatrimonio())
+                using (PatrimonioRepository conexao = new PatrimonioRepository())
                 {
                     patrimonios = conexao.Get(marcaId);
                     return patrimonios;
                 }
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
@@ -44,11 +43,11 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioPatrimonio conexao = new RepositorioPatrimonio())
+                using (PatrimonioRepository conexao = new PatrimonioRepository())
                     conexao.Post(marcaId, nome, descricao);
 
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
@@ -57,10 +56,10 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioPatrimonio conexao = new RepositorioPatrimonio())
+                using (PatrimonioRepository conexao = new PatrimonioRepository())
                     conexao.Delete(marcaId);
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
@@ -69,10 +68,10 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioPatrimonio conexao = new RepositorioPatrimonio())
+                using (PatrimonioRepository conexao = new PatrimonioRepository())
                     conexao.Put(marcaId, nome, descricao);
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }

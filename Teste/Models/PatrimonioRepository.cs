@@ -7,7 +7,7 @@ using System.Web.Configuration;
 
 namespace Teste.Models
 {
-    public class RepositorioPatrimonio : IDisposable
+    public class PatrimonioRepository : IDisposable
     {
         private SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["Teste"].ConnectionString);
 

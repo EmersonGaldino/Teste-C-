@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Web.Http;
 using Teste.Models;
 
@@ -15,7 +14,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                 {
                     marcas = conexao.Get();
                     return marcas;
@@ -31,7 +30,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                 {
                     marcas = conexao.Get(marcaId);
                     return marcas;
@@ -47,7 +46,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                 {
                     patrimonios = conexao.GetComposto(marcaId);
                     return patrimonios;
@@ -62,7 +61,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                     conexao.Post(nome);
             }
             catch (Exception e)
@@ -74,7 +73,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                     conexao.Delete(marcaId);
             }
             catch (Exception e)
@@ -86,7 +85,7 @@ namespace Teste.Controllers
         {
             try
             {
-                using (RepositorioMarca conexao = new RepositorioMarca())
+                using (MarcaRepository conexao = new MarcaRepository())
                     conexao.Put(marcaId, nome);
             }
             catch (Exception e)

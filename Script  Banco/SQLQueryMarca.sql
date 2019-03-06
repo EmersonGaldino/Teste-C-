@@ -1,0 +1,20 @@
+USE Teste
+
+CREATE TABLE Marca
+
+(MarcaId INT PRIMARY KEY IDENTITY (1,1),
+Nome VARCHAR (50) NOT NULL UNIQUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -87,13 +87,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MarcaController.cs" />
     <Compile Include="Controllers\PatrimonioController.cs" />
-    <Compile Include="Models\RepositorioMarca.cs" />
+    <Compile Include="Models\MarcaRepository.cs" />
     <Compile Include="Models\Marca.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Patrimonio.cs" />
-    <Compile Include="Models\RepositorioPatrimonio.cs" />
+    <Compile Include="Models\PatrimonioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
